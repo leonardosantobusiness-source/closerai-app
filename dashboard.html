@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CloserAI - Dashboard</title>
+
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet" href="css/dashboard.css">
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+</head>
+
+
+<body>
+
+
+<div class="dashboard-layout">
+
+
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+
+<div class="logo">
+
+Closer<span>AI</span>
+
+</div>
+
+
+
+<a class="active" href="dashboard.html">
+
+📊 Dashboard
+
+</a>
+
+
+
+<a href="agente.html">
+
+🤖 Minha IA
+
+</a>
+
+
+
+<a href="conversas.html">
+
+💬 Conversas
+
+</a>
+
+
+
+<a href="clientes.html">
+
+👥 Clientes
+
+</a>
+
+
+
+<a href="agenda.html">
+
+📅 Agenda
+
+</a>
+
+
+
+<a href="vendas.html">
+
+💰 Vendas
+
+</a>
+
+
+
+<a href="configuracoes.html">
+
+⚙️ Configurações
+
+</a>
+
+
+</aside>
+
+
+
+
+
+<!-- CONTEÚDO -->
+
+<main class="dashboard-main">
+
+
+
+<header class="dash-header">
+
+
+<div>
+
+
+<h1>
+
+Dashboard Premium
+
+</h1>
+
+
+<p>
+
+Controle seu vendedor IA 24 horas.
+
+</p>
+
+
+</div>
+
+
+
+<div class="ia-status">
+
+🟢 IA Online
+
+</div>
+
+
+
+</header>
+
+
+
+
+
+<section class="stats-grid">
+
+
+
+<div class="dash-card">
+
+<h3>
+
+👥 Clientes
+
+</h3>
+
+
+<strong id="totalClientes">
+
+0
+
+</strong>
+
+
+<p>
+
+Novos clientes
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="dash-card">
+
+
+<h3>
+
+💬 Conversas
+
+</h3>
+
+
+<strong id="totalConversas">
+
+0
+
+</strong>
+
+
+<p>
+
+Atendimentos IA
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="dash-card">
+
+
+<h3>
+
+💰 Vendas
+
+</h3>
+
+
+<strong id="totalVendas">
+
+$0
+
+</strong>
+
+
+<p>
+
+Receita total
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="dash-card">
+
+
+<h3>
+
+📅 Agenda
+
+</h3>
+
+
+<strong id="totalAgenda">
+
+0
+
+</strong>
+
+
+<p>
+
+Reuniões marcadas
+
+</p>
+
+
+</div>
+
+
+
+</section><!-- GRÁFICO + NOTIFICAÇÕES -->
+
+
+<section class="dashboard-grid">
+
+
+
+<div class="dash-box">
+
+
+<h2>
+
+📈 Vendas
+
+</h2>
+
+
+
+<canvas id="salesChart"></canvas>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="dash-box">
+
+
+<h2>
+
+🔔 Notificações
+
+</h2>
+
+
+
+<div class="notice">
+
+Nenhuma venda ainda
+
+</div>
+
+
+
+<div class="notice">
+
+Treine sua IA para começar
+
+</div>
+
+
+
+<div class="notice">
+
+Conecte seus canais
+
+</div>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+<!-- INFORMAÇÕES DA IA -->
+
+
+<section class="dashboard-grid">
+
+
+
+
+
+<div class="dash-box">
+
+
+
+<h2>
+
+🤖 Estado da IA
+
+</h2>
+
+
+
+
+<p>
+
+Nome:
+
+<b id="nomeIA">
+
+Carregando...
+
+</b>
+
+
+</p>
+
+
+
+
+
+<p>
+
+Função:
+
+<b>
+
+Especialista em vendas
+
+</b>
+
+
+</p>
+
+
+
+
+
+<p>
+
+Status:
+
+<span class="online">
+
+Ativa
+
+</span>
+
+
+</p>
+
+
+
+
+
+<a href="agente.html" class="btn-primary">
+
+Treinar IA
+
+</a>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="dash-box">
+
+
+
+<h2>
+
+💬 Conversas recentes
+
+</h2>
+
+
+
+
+<div class="conversation">
+
+
+<p>
+
+Nenhum cliente conectado
+
+</p>
+
+
+
+<span>
+
+Aguardando mensagens...
+
+</span>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+<!-- RESUMO DA EMPRESA -->
+
+
+<section class="dash-box company-box">
+
+
+<h2>
+
+🏢 Empresa
+
+</h2>
+
+
+<p>
+
+Nome:
+
+<strong id="nomeEmpresa">
+
+Carregando...
+
+</strong>
+
+</p>
+
+
+
+<p>
+
+Plano:
+
+<strong>
+
+Grátis
+
+</strong>
+
+</p>
+
+
+
+<p>
+
+Moeda:
+
+<strong>
+
+USD
+
+</strong>
+
+</p>
+
+
+
+</section><!-- SCRIPTS -->
+
+
+<script>
+
+
+const ctx = document.getElementById('salesChart');
+
+
+new Chart(ctx, {
+
+
+type:'line',
+
+
+data:{
+
+
+labels:[
+
+'Jan',
+
+'Fev',
+
+'Mar',
+
+'Abr',
+
+'Mai'
+
+],
+
+
+datasets:[{
+
+
+label:'Vendas ($)',
+
+
+data:[
+
+0,
+
+0,
+
+0,
+
+0,
+
+0
+
+]
+
+
+}]
+
+
+},
+
+
+options:{
+
+
+responsive:true,
+
+
+plugins:{
+
+
+legend:{
+
+
+display:true
+
+
+}
+
+
+}
+
+
+}
+
+
+});
+
+
+
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+
+<script src="js/supabase.js"></script>
+
+
+<script src="js/dashboard.js"></script>
+
+
+
+</body>
+
+
+</html>

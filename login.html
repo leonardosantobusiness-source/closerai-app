@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CloserAI - Login</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="auth-page">
+
+<div class="card auth-card glow">
+
+<div class="logo auth-logo">
+
+Closer<span>AI</span>
+
+</div>
+
+<h1>
+
+Bem-vindo de volta
+
+</h1>
+
+<p class="description">
+
+Entre na sua conta e continue a gerir o seu vendedor IA.
+
+</p>
+
+<form id="loginForm">
+
+<label>
+
+Email
+
+</label>
+
+<input
+
+id="email"
+
+type="email"
+
+placeholder="Digite seu email"
+
+required
+
+>
+
+<label>
+
+Senha
+
+</label>
+
+<input
+
+id="senha"
+
+type="password"
+
+placeholder="Digite sua senha"
+
+required
+
+>
+
+<button
+
+class="btn-primary"
+
+type="submit">
+
+Entrar
+
+</button>
+
+</form>
+
+<p id="mensagem" style="margin-top:20px;"></p>
+
+<p class="bottom-text">
+
+Ainda não tem conta?
+
+<a href="cadastro.html">
+
+Criar conta
+
+</a>
+
+</p>
+
+</div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="js/supabase.js"></script>
+
+<script src="js/login.js"></script>
+
+</body>
+
+</html>
