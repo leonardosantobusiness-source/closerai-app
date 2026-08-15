@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CloserAI - Agenda</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body>
+
+<div class="dashboard-layout">
+
+<aside class="sidebar">
+
+<div class="logo">
+Closer<span>AI</span>
+</div>
+
+<a href="dashboard.html">📊 Dashboard</a>
+<a href="agente.html">🤖 Minha IA</a>
+<a href="conversas.html">💬 Conversas</a>
+<a href="clientes.html">👥 Clientes</a>
+<a href="vendas.html">💰 Vendas</a>
+<a class="active" href="agenda.html">📅 Agenda</a>
+<a href="configuracoes.html">⚙️ Configurações</a>
+
+</aside>
+
+
+<main class="dashboard-main">
+
+
+<div class="dash-header">
+
+<div>
+
+<h1>Agenda Inteligente</h1>
+
+<p>
+Acompanhe reuniões, lembretes e tarefas criadas pela IA.
+</p>
+
+</div>
+
+<div class="ia-status">
+🟢 IA Organizando
+</div>
+
+</div>
+
+
+<section class="stats-grid">
+
+
+<div class="dash-card">
+
+<h3>Reuniões Hoje</h3>
+
+<strong id="reunioesHoje">0</strong>
+
+<p>Agendadas</p>
+
+</div>
+
+
+<div class="dash-card">
+
+<h3>Lembretes</h3>
+
+<strong id="lembretes">0</strong>
+
+<p>Pendentes</p>
+
+</div>
+
+
+<div class="dash-card">
+
+<h3>Follow-up</h3>
+
+<strong id="followup">0</strong>
+
+<p>Clientes para contactar</p>
+
+</div>
+
+
+<div class="dash-card">
+
+<h3>Tarefas</h3>
+
+<strong id="tarefas">0</strong>
+
+<p>Em aberto</p>
+
+</div>
+
+
+</section>
+
+
+<div class="dash-box">
+
+<h2>Agenda</h2>
+
+
+<div style="overflow-x:auto;margin-top:20px;">
+
+<table style="width:100%;border-collapse:collapse;">
+
+
+<thead>
+
+<tr>
+
+<th align="left">Data</th>
+
+<th align="left">Evento</th>
+
+<th align="left">Cliente</th>
+
+<th align="left">Estado</th>
+
+</tr>
+
+</thead>
+
+
+<tbody id="agendaLista">
+
+<tr>
+
+<td
+colspan="4"
+style="
+padding:30px;
+text-align:center;
+color:#94a3b8;
+">
+
+⏳ A carregar agenda...
+
+</td>
+
+</tr>
+
+</tbody>
+
+
+</table>
+
+</div>
+
+
+<p
+id="agendaMensagem"
+class="description"
+style="margin-top:20px;">
+
+</p>
+
+
+</div>
+
+
+</main>
+
+</div>
+
+
+<!-- SUPABASE -->
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="js/supabase.js"></script>
+
+
+<!-- AGENDA -->
+
+<script src="js/agenda.js"></script>
+
+
+</body>
+
+</html>
