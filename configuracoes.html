@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CloserAI - Configurações</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body>
+
+<div class="dashboard-layout">
+
+<aside class="sidebar">
+
+<div class="logo">
+Closer<span>AI</span>
+</div>
+
+<a href="dashboard.html">📊 Dashboard</a>
+
+<a href="agente.html">🤖 Minha IA</a>
+
+<a href="conversas.html">💬 Conversas</a>
+
+<a href="clientes.html">👥 Clientes</a>
+
+<a href="vendas.html">💰 Vendas</a>
+
+<a href="agenda.html">📅 Agenda</a>
+
+<a class="active" href="configuracoes.html">
+⚙️ Configurações
+</a>
+
+</aside>
+
+
+<main class="dashboard-main">
+
+
+<div class="dash-header">
+
+<div>
+
+<h1>Configurações</h1>
+
+<p>
+Gerencie sua empresa, IA e integrações.
+</p>
+
+</div>
+
+<div class="ia-status">
+
+🟢 Sistema Online
+
+</div>
+
+</div>
+
+
+
+<!-- =============================== -->
+<!-- EMPRESA -->
+<!-- =============================== -->
+
+<div class="dash-box">
+
+<h2>🏢 Empresa</h2>
+
+
+<label>Nome da Empresa</label>
+
+<input
+id="nomeEmpresa"
+type="text"
+placeholder="Nome da empresa"
+>
+
+
+<label>Email</label>
+
+<input
+id="emailEmpresa"
+type="email"
+placeholder="empresa@email.com"
+>
+
+
+<label>Responsável</label>
+
+<input
+id="responsavelEmpresa"
+type="text"
+placeholder="Nome do responsável"
+>
+
+
+<label>Moeda</label>
+
+<select id="moedaEmpresa">
+
+<option value="USD">USD ($)</option>
+
+<option value="EUR">EUR (€)</option>
+
+<option value="GBP">GBP (£)</option>
+
+<option value="AOA">AOA (Kz)</option>
+
+<option value="BRL">BRL (R$)</option>
+
+</select>
+
+</div>
+
+
+<br>
+
+
+
+<!-- =============================== -->
+<!-- IA -->
+<!-- =============================== -->
+
+<div class="dash-box">
+
+<h2>🤖 Minha IA</h2>
+
+
+<label>Nome da IA</label>
+
+<input
+id="nomeIA"
+type="text"
+placeholder="Closer AI"
+>
+
+
+<label>Objetivo da IA</label>
+
+<select id="objetivoIA">
+
+<option value="Vendas">
+Vendas
+</option>
+
+<option value="Atendimento">
+Atendimento
+</option>
+
+<option value="Suporte">
+Suporte
+</option>
+
+<option value="Reuniões">
+Reuniões
+</option>
+
+</select>
+
+</div>
+
+
+<br>
+
+
+
+<!-- =============================== -->
+<!-- INTEGRAÇÕES -->
+<!-- =============================== -->
+
+<div class="dash-box">
+
+<h2>🌍 Integrações</h2>
+
+<p>🟢 WhatsApp Business</p>
+
+<p>📸 Instagram</p>
+
+<p>✈️ Telegram</p>
+
+<p>🌐 Website</p>
+
+<p>💬 Messenger</p>
+
+<p
+style="
+color:#94a3b8;
+font-size:14px;
+margin-top:15px;
+"
+>
+As integrações serão conectadas na próxima etapa.
+</p>
+
+</div>
+
+
+<br>
+
+
+
+<!-- =============================== -->
+<!-- BOTÃO -->
+<!-- =============================== -->
+
+<button
+id="salvarConfiguracoes"
+class="btn-primary"
+type="button"
+>
+
+💾 Salvar Alterações
+
+</button>
+
+
+<p
+id="configMensagem"
+class="description"
+style="margin-top:20px;"
+>
+</p>
+
+
+</main>
+
+</div>
+
+
+
+<!-- SUPABASE -->
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="js/supabase.js"></script>
+
+<script src="js/configuracoes.js"></script>
+
+
+</body>
+
+</html>
